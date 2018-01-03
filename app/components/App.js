@@ -1,13 +1,9 @@
 import React from 'react';
-import {
-    BrowserRouter as Router,
-    Redirect,
-    Route,
-    Switch
-} from 'react-router-dom';
+import { Route } from 'react-router'
 
 import List from './List'
 import Home from './Home'
+import Collapse from './views/accordionEg.js';
 export default function App(props) {
 
     const { pokemon } = props;
@@ -15,11 +11,10 @@ export default function App(props) {
     return (
         <div>
             Your SSR React Router Node App initialised with data!
-            <Switch>
+
                 <Route path="/" exact component={Home} /> 
-                <Route path="/pokemon" exact render={() => (<Redirect to="/pokemon/ability/telepathy" />)} />
-                <Route path="/pokemon/ability/:ability" render={(location) => (<List pokemon={pokemon.list} location={location} />)} />
-            </Switch>
+                <Route path="/list" exact component={Collapse} /> 
+
         </div>
     )
 };
