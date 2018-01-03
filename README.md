@@ -24,3 +24,4 @@ My next tutorial will be extending this boilerplate to use redux and for the sto
 * `npm run build:client` - runs webpack to build bundle
 * `npm run build:prod` - builds both client and server
 * `npm run start` - it calls `build:prod` and then runs the app 
+# ssr-react-router-node-boilerplate
