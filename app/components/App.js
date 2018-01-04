@@ -6,8 +6,8 @@ import Home from './Home'
 import Collapse from './views/accordionEg.js';
 export default function App(props) {
 
-    const { pokemon } = props;
-
+    const { userInfo } = props;
+    console.log(userInfo)
     return (
         <div>
             Your SSR React Router Node App initialised with data!

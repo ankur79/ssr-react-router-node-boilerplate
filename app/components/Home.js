@@ -1,5 +1,14 @@
 import React from 'react';
 
-export default function Home() {
-    return <div> <button>LOGIN</button> </div>
-}
+class Home extends React.Component {
+  
+    userLogin(){
+        window.location.href = '/login';
+    }  
+    render() {
+      console.log(this.props)
+      return <div> <button onClick={this.userLogin}>LOGIN</button> </div>;
+    }
+  }
+
+  export default Home;
