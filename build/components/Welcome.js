@@ -18,39 +18,28 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Home = function (_React$Component) {
-  _inherits(Home, _React$Component);
+var Welcome = function (_React$Component) {
+  _inherits(Welcome, _React$Component);
 
-  function Home() {
-    _classCallCheck(this, Home);
+  function Welcome() {
+    _classCallCheck(this, Welcome);
 
-    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Welcome.__proto__ || Object.getPrototypeOf(Welcome)).apply(this, arguments));
   }
 
-  _createClass(Home, [{
-    key: 'userLogin',
-    value: function userLogin() {
-      window.location.href = '/authuser';
-    }
-  }, {
+  _createClass(Welcome, [{
     key: 'render',
     value: function render() {
       console.log(this.props);
       return _react2.default.createElement(
         'div',
         null,
-        ' ',
-        _react2.default.createElement(
-          'button',
-          { onClick: this.userLogin },
-          'LOGIN'
-        ),
-        ' '
+        ' WElcome to my App '
       );
     }
   }]);
 
-  return Home;
+  return Welcome;
 }(_react2.default.Component);
 
-exports.default = Home;
+exports.default = Welcome;

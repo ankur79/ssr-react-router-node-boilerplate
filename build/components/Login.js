@@ -18,19 +18,19 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Home = function (_React$Component) {
-  _inherits(Home, _React$Component);
+var Login = function (_React$Component) {
+  _inherits(Login, _React$Component);
 
-  function Home() {
-    _classCallCheck(this, Home);
+  function Login() {
+    _classCallCheck(this, Login);
 
-    return _possibleConstructorReturn(this, (Home.__proto__ || Object.getPrototypeOf(Home)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Login.__proto__ || Object.getPrototypeOf(Login)).apply(this, arguments));
   }
 
-  _createClass(Home, [{
+  _createClass(Login, [{
     key: 'userLogin',
     value: function userLogin() {
-      window.location.href = '/authuser';
+      window.location.href = '/login';
     }
   }, {
     key: 'render',
@@ -50,7 +50,7 @@ var Home = function (_React$Component) {
     }
   }]);
 
-  return Home;
+  return Login;
 }(_react2.default.Component);
 
-exports.default = Home;
+exports.default = Login;

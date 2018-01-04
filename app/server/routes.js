@@ -1,6 +1,7 @@
 const routes = [
     '/',
-    '/list'
+    '/u/',
+    '/u/list'
 ]
 
 export default routes;

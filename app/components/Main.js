@@ -1,9 +1,10 @@
 import React from 'react';
 import { Route } from 'react-router'
 
-import Home from './Home'
+import List from './List'
+import Welcome from './Welcome'
 import Collapse from './views/accordionEg.js';
-export default function App(props) {
+export default function Main(props) {
 
     const { userInfo } = props;
     console.log(userInfo)
@@ -11,7 +12,8 @@ export default function App(props) {
         <div>
             Your SSR React Router Node App initialised with data!
 
-                <Route path="/" exact component={Home} /> 
+                <Route path="/u/" exact component={Welcome} /> 
+                <Route path="/u/list" exact component={Collapse} /> 
 
         </div>
     )

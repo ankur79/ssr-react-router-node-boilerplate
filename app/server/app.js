@@ -55,7 +55,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const errorhandler = require('errorhandler');
-
+const pug = require('pug');
 var env = process.env.NODE_ENV || 'development';
 const config = require('./config/config')[env];
 
@@ -66,8 +66,8 @@ require('./config/passport')(passport, config);
 var app = express();
 
 app.set('port', config.app.port);
-//app.set('views', __dirname + '/app/views');
-//app.set('view engine', 'jade');
+app.set('views', path.join(__dirname, './', 'views'));
+app.set('view engine', 'pug');
 app.use(morgan('combined'));
 app.use(cookieParser());path
 app.use(bodyParser.json());

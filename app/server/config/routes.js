@@ -14,13 +14,27 @@ import routelist from '../routes';
 import renderFullPage from '../renderFullPage';
 
 import App from '../../components/App';
+import Main from '../../components/Main';
+
 import reducers from '../../components/reducers' // Or wherever you keep your reducers
 
 
 
 module.exports = function (app, config, passport) {
-
+  
   app.get('/', function (req, res) {
+    if (req.isAuthenticated()) {
+      res.render('index',
+        {
+          user: req.user
+        });
+    } else {
+      res.render('index',
+        {
+          user: null
+        });
+    }
+    /*
         // Create a history of your choosing (we're using a browser history in this case)
         const history = createHistory()
 
@@ -55,17 +69,67 @@ module.exports = function (app, config, passport) {
             
     const html = renderToString(
         <Provider store={store}>
-            { /* ConnectedRouter will use the store from Provider automatically */ }
-            <ConnectedRouter history={history}>
+           
+            <StaticRouter  location={req.url} context={context}>
                 <App userInfo={userInfo}/>
-            </ConnectedRouter>
+            </StaticRouter>
       </Provider>
      
     )
 
-    res.status(200).send(renderFullPage(html));
+    //res.status(200).send(renderFullPage(html));
+    res.render('index', {title: 'Express', data: [],  html });*/
 
   });
+
+  app.get('/u/*', function (req, res) {
+        // Create a history of your choosing (we're using a browser history in this case)
+        const history = createHistory()
+
+        // Build the middleware for intercepting and dispatching navigation actions
+        const middleware = routerMiddleware(history)
+
+        const match = routelist.reduce((acc, route) => matchPath(req.url, { path: route, exact: true }) || acc, null);
+
+        // Add the reducer to your store on the `router` key
+        // Also apply our middleware for navigating
+        const store = createStore(
+            combineReducers({
+            reducers,
+            router: routerReducer
+            }),
+            applyMiddleware(middleware)
+        )
+
+        if (!match) {
+            res.status(404).send('page not found');
+            return;
+        }
+    let userInfo = null;
+    if (req.isAuthenticated()) {
+      userInfo = req.user;
+    } else {
+      //userAuth = false;
+    }
+
+    console.log(userInfo)
+    const context = {}
+            
+    const html = renderToString(
+        <Provider store={store}>
+            { /* ConnectedRouter will use the store from Provider automatically */ }
+            <StaticRouter  location={req.url} context={context}>
+                <Main userInfo={userInfo}/>
+            </StaticRouter>
+      </Provider>
+    
+    )
+
+    //res.status(200).send(renderFullPage(html));
+    res.render('main', {title: 'Express', data: [],  html });
+
+  });
+
 
   app.get('/login',
     passport.authenticate(config.passport.strategy,

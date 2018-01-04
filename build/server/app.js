@@ -60,7 +60,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var errorhandler = require('errorhandler');
-
+var pug = require('pug');
 var env = process.env.NODE_ENV || 'development';
 var config = require('./config/config')[env];
 
@@ -71,8 +71,8 @@ require('./config/passport')(passport, config);
 var app = express();
 
 app.set('port', config.app.port);
-//app.set('views', __dirname + '/app/views');
-//app.set('view engine', 'jade');
+app.set('views', path.join(__dirname, './', 'views'));
+app.set('view engine', 'pug');
 app.use(morgan('combined'));
 app.use(cookieParser());path;
 app.use(bodyParser.json());

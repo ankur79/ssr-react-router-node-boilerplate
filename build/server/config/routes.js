@@ -32,6 +32,10 @@ var _App = require('../../components/App');
 
 var _App2 = _interopRequireDefault(_App);
 
+var _Main = require('../../components/Main');
+
+var _Main2 = _interopRequireDefault(_Main);
+
 var _reducers = require('../../components/reducers');
 
 var _reducers2 = _interopRequireDefault(_reducers);
@@ -44,6 +48,60 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 module.exports = function (app, config, passport) {
 
   app.get('/', function (req, res) {
+    if (req.isAuthenticated()) {
+      res.render('index', {
+        user: req.user
+      });
+    } else {
+      res.render('index', {
+        user: null
+      });
+    }
+    /*
+        // Create a history of your choosing (we're using a browser history in this case)
+        const history = createHistory()
+         // Build the middleware for intercepting and dispatching navigation actions
+        const middleware = routerMiddleware(history)
+    
+        const match = routelist.reduce((acc, route) => matchPath(req.url, { path: route, exact: true }) || acc, null);
+    
+        // Add the reducer to your store on the `router` key
+        // Also apply our middleware for navigating
+        const store = createStore(
+            combineReducers({
+            reducers,
+            router: routerReducer
+            }),
+            applyMiddleware(middleware)
+        )
+    
+        if (!match) {
+            res.status(404).send('page not found');
+            return;
+        }
+    let userInfo = null;
+    if (req.isAuthenticated()) {
+      userInfo = req.user;
+    } else {
+      //userAuth = false;
+    }
+     console.log(userInfo)
+    const context = {}
+            
+    const html = renderToString(
+        <Provider store={store}>
+           
+            <StaticRouter  location={req.url} context={context}>
+                <App userInfo={userInfo}/>
+            </StaticRouter>
+      </Provider>
+     
+    )
+     //res.status(200).send(renderFullPage(html));
+    res.render('index', {title: 'Express', data: [],  html });*/
+  });
+
+  app.get('/u/*', function (req, res) {
     // Create a history of your choosing (we're using a browser history in this case)
     var history = (0, _createMemoryHistory2.default)();
 
@@ -79,13 +137,14 @@ module.exports = function (app, config, passport) {
       _reactRedux.Provider,
       { store: store },
       _react2.default.createElement(
-        _reactRouterRedux.ConnectedRouter,
-        { history: history },
-        _react2.default.createElement(_App2.default, { userInfo: userInfo })
+        _reactRouterDom.StaticRouter,
+        { location: req.url, context: context },
+        _react2.default.createElement(_Main2.default, { userInfo: userInfo })
       )
     ));
 
-    res.status(200).send((0, _renderFullPage2.default)(html));
+    //res.status(200).send(renderFullPage(html));
+    res.render('main', { title: 'Express', data: [], html: html });
   });
 
   app.get('/login', passport.authenticate(config.passport.strategy, {

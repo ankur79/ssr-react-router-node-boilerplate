@@ -3,7 +3,7 @@ import React from 'react';
 class Home extends React.Component {
   
     userLogin(){
-        window.location.href = '/login';
+        window.location.href = '/authuser';
     }  
     render() {
       console.log(this.props)
