@@ -1,6 +1,7 @@
 extends layout
 
 block content
-  script(type='text/javascript').
-    window.__INITIAL_STATE__ = !{JSON.stringify(data)}
-  div.container#app!= content
+  h1 Welcome
+      br
+      a(href="/login") Login
+      a(href="/logout") Logout
