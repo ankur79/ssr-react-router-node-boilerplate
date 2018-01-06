@@ -1,6 +1,12 @@
 /*
-@import url('../../node_modules/react-datetime/css/react-datetime.css');
+@import url('../../node_modules/react-accessible-accordion/dist/react-accessible-accordion.css');
+@import url('../../node_modules/react-table/react-table.css');
+@import url('../../node_modules/react-bootstrap-table/dist/react-bootstrap-table-all.min.css');
 */
+@import url('../../node_modules/bootstrap/dist/css/bootstrap.css');
+@import url('../css/navHeader.css');
+@import url('../css/App.css');
+@import url('../css/index.css');
 @import url('../css/accordion.css');
 @import url('../css/bcpForm.css'); 
 @import url('../../node_modules/react-datetime/css/react-datetime.css');

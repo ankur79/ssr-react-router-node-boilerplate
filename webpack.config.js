@@ -20,7 +20,8 @@ module.exports = {
                     presets: ['es2015', 'stage-2', 'react']
                 }
             },
-            {test: /\.css$/,loader: "style-loader!css-loader"}
+            {test: /\.css$/,loader: "style-loader!css-loader"},
+            {test: /\.(jpe?g|png|gif|svg|ttf|eot|svg|woff|woff2)$/i, loader: "file-loader?name=/app/utils/[name].[ext]"}
         ]
     }
 };
