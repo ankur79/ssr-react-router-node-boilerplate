@@ -1,16 +1,20 @@
 import React from 'react';
-import { connect } from 'react-redux'
-class Welcome extends React.Component {
-    render() {
-      const { isAuthenticated } = this.props;
-      console.log(isAuthenticated);
-      return <div> Welcome to my App </div>;
-    }
-}
-const mapStateToProps = (state, ownProps) => {
-  return {
-    isAuthenticated: state.isAuthenticated
-  }
-}
+//import '../css/accordion.css';
+//require('../css/accordion.css')
+//import ReactTableIndex from '../components/reactTableIndex';
+import BcpForm from '../components/bcpForm';
+import {Panel, PanelGroup} from 'react-bootstrap'; 
 
-  export default connect(mapStateToProps)(Welcome);
+const Collapse = () => (
+  <PanelGroup>
+      <Panel collapsible header="CREATE BCP REPORT" eventKey="1">
+          <BcpForm/>
+      </Panel>
+      {/*<Panel collapsible defaultExpanded header="VIEW ALL BCP REPORT(S)" eventKey="2">
+          <ReactTableIndex/>
+</Panel>*/}
+  </PanelGroup> 
+);
+
+
+export default Collapse;

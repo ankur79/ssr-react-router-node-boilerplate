@@ -17,9 +17,14 @@ module.exports = {
                 include: path.join(__dirname, 'app'),
                 exclude: /node_modules/,
                 query: {
-                    presets: ['es2015', 'react']
+                    presets: ['es2015', 'stage-2', 'react']
                 }
-            }
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                loaders: ['style-loader', 'css-loader'],
+               }
         ]
     }
 };

@@ -1,0 +1,196 @@
+[{
+    "systemname": "OMAHA",
+    "adminheadendlist": [{
+            "headendName": "Sun Valley",
+            "adminsubsystemName": "Sun Valley"
+        },
+        {
+            "headendName": "Bellevue",
+            "adminsubsystemName": "Omaha"
+        },
+        {
+            "headendName": "Council Bluffs",
+            "adminsubsystemName": "Omaha"
+        },
+        {
+            "headendName": "Elkhorn",
+            "adminsubsystemName": "Omaha"
+        }
+    ],
+    "adminsubsystemlist": [{
+            "subsystemId": "Sun Valley"
+        },
+        {
+            "subsystemId": "Omaha"
+        }
+    ]
+},
+{
+    "systemname": "KANSAS",
+    "adminheadendlist": [{
+            "headendName": "Topeka",
+            "adminsubsystemName": "Northeast-Kansas"
+        },
+        {
+            "headendName": "Garden City",
+            "adminsubsystemName": "Western-Kansas"
+        },
+        {
+            "headendName": "Wichita",
+            "adminsubsystemName": "Central-Kansas"
+        },
+        {
+            "headendName": "Derby",
+            "adminsubsystemName": "Central-Kansas"
+        },
+        {
+            "headendName": "Iola",
+            "adminsubsystemName": "Southeast-Kansas"
+        },
+        {
+            "headendName": "Junction City",
+            "adminsubsystemName": "Northeast-Kansas"
+        },
+        {
+            "headendName": "Pittsburg",
+            "adminsubsystemName": "Southeast-Kansas"
+        },
+        {
+            "headendName": "Salina",
+            "adminsubsystemName": "Northeast-Kansas"
+        },
+        {
+            "headendName": "Coffeyville",
+            "adminsubsystemName": "Southeast-Kansas"
+        },
+        {
+            "headendName": "Great Bend",
+            "adminsubsystemName": "Western-Kansas"
+        },
+        {
+            "headendName": "Van Buren",
+            "adminsubsystemName": "Northwest-Arkansas"
+        },
+        {
+            "headendName": "McPherson",
+            "adminsubsystemName": "Central-Kansas"
+        },
+        {
+            "headendName": "Siloam Springs",
+            "adminsubsystemName": "Northwest-Arkansas"
+        },
+        {
+            "headendName": "Winfield",
+            "adminsubsystemName": "Central-Kansas"
+        },
+        {
+            "headendName": "Manhattan",
+            "adminsubsystemName": "Northeast-Kansas"
+        },
+        {
+            "headendName": "Fayetteville",
+            "adminsubsystemName": "Northwest-Arkansas"
+        },
+        {
+            "headendName": "Newton",
+            "adminsubsystemName": "Central-Kansas"
+        },
+        {
+            "headendName": "Bentonville",
+            "adminsubsystemName": "Northwest-Arkansas"
+        },
+        {
+            "headendName": "Fort Smith",
+            "adminsubsystemName": "Northwest-Arkansas"
+        },
+        {
+            "headendName": "Hutchinson",
+            "adminsubsystemName": "Central-Kansas"
+        }
+    ],
+    "adminsubsystemlist": [{
+            "subsystemId": "Northwest-Arkansas"
+        },
+        {
+            "subsystemId": "Northeast-Kansas"
+        },
+        {
+            "subsystemId": "Western-Kansas"
+        },
+        {
+            "subsystemId": "Southeast-Kansas"
+        },
+        {
+            "subsystemId": "Central-Kansas"
+        }
+    ]
+},
+{
+    "systemname": "GAINSVILLE",
+    "adminheadendlist": [{
+            "headendName": "Gainesville",
+            "adminsubsystemName": "Gainesville"
+        },
+        {
+            "headendName": "Ocala",
+            "adminsubsystemName": "Ocala"
+        }
+    ],
+    "adminsubsystemlist": [{
+            "subsystemId": "Ocala"
+        },
+        {
+            "subsystemId": "Gainesville"
+        }
+    ]
+},
+{
+    "systemname": "NORTHERNVA",
+    "adminheadendlist": [{
+        "headendName": "Fredericksburg",
+        "adminsubsystemName": ""
+    }],
+    "adminsubsystemlist": [{
+        "subsystemId": ""
+    }]
+},
+{
+    "systemname": "BATONROUGE",
+    "adminheadendlist": [{
+            "headendName": "New Iberia",
+            "adminsubsystemName": "Lafayette-Acadiana"
+        },
+        {
+            "headendName": "Franklin",
+            "adminsubsystemName": "Lafayette-Acadiana"
+        },
+        {
+            "headendName": "Crowley",
+            "adminsubsystemName": "Lafayette-Acadiana"
+        },
+        {
+            "headendName": "Abbeville",
+            "adminsubsystemName": "Lafayette-Acadiana"
+        },
+        {
+            "headendName": "Baton Rouge",
+            "adminsubsystemName": "Baton-Rouge"
+        },
+        {
+            "headendName": "Gonzales",
+            "adminsubsystemName": "Baton-Rouge"
+        },
+        {
+            "headendName": "Lafayette",
+            "adminsubsystemName": "Lafayette-Acadiana"
+        }
+    ],
+    "adminsubsystemlist": [{
+            "subsystemId": "Lafayette-Acadiana"
+        },
+        {
+            "subsystemId": "Baton-Rouge"
+        }
+    ]
+}
+]

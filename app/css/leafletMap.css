@@ -1,0 +1,37 @@
+.leaflet-container {
+    height: 570px !important;
+    /* width: 80% !important; */
+}
+
+.leaflet-marker-icon {
+display: none !important;
+visibility: hidden !important;
+}
+
+.leaflet-marker-shadow{
+display:none !important;
+visibility: hidden !important;
+}
+
+.container-fluid .panel-group .panel .panel-collapse .panel-body .leaflet-container .leaflet-pane .leaflet-marker-pane {
+  display:none !important;
+  visibility: hidden !important;
+}
+
+.leaflet-control-attribution .leaflet-control {
+  display: none !important;
+}
+.leaflet-bottom {
+  display: none !important;
+}
+/* .leaflet-pane{
+height:100%
+}  */
+
+#mapwrapper {
+  position: absolute !important;
+  bottom: 0;
+  top: 0;
+  width: 100%;  
+}
+

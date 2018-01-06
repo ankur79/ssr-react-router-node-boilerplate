@@ -16,10 +16,9 @@ import renderFullPage from '../renderFullPage';
 import App from '../../components/App';
 import Main from '../../components/Main';
 
-import reducers from '../../components/reducers' // Or wherever you keep your reducers
+import categories from '../../reducers' // Or wherever you keep your reducers
 
-const store = createStore(reducers, applyMiddleware(thunk));
-
+const store = createStore(categories,applyMiddleware(thunk));
 module.exports = function (app, config, passport) {
   
   app.get('/', function (req, res) {
@@ -34,56 +33,9 @@ module.exports = function (app, config, passport) {
           user: null
         });
     }
-    /*
-        // Create a history of your choosing (we're using a browser history in this case)
-        const history = createHistory()
-
-        // Build the middleware for intercepting and dispatching navigation actions
-        const middleware = routerMiddleware(history)
-    
-        const match = routelist.reduce((acc, route) => matchPath(req.url, { path: route, exact: true }) || acc, null);
-    
-        // Add the reducer to your store on the `router` key
-        // Also apply our middleware for navigating
-        const store = createStore(
-            combineReducers({
-            reducers,
-            router: routerReducer
-            }),
-            applyMiddleware(middleware)
-        )
-    
-        if (!match) {
-            res.status(404).send('page not found');
-            return;
-        }
-    let userInfo = null;
-    if (req.isAuthenticated()) {
-      userInfo = req.user;
-    } else {
-      //userAuth = false;
-    }
-
-    console.log(userInfo)
-    const context = {}
-            
-    const html = renderToString(
-        <Provider store={store}>
-           
-            <StaticRouter  location={req.url} context={context}>
-                <App userInfo={userInfo}/>
-            </StaticRouter>
-      </Provider>
-     
-    )
-
-    //res.status(200).send(renderFullPage(html));
-    res.render('index', {title: 'Express', data: [],  html });*/
-
   });
 
   app.get('/u/*', function (req, res) {
-
 
         const match = routelist.reduce((acc, route) => matchPath(req.url, { path: route, exact: true }) || acc, null);
 
@@ -111,10 +63,8 @@ module.exports = function (app, config, passport) {
                 <Main userInfo={userInfo}/>
             </StaticRouter>
       </Provider>
-    
     )
 
-    //res.status(200).send(renderFullPage(html));
     res.render('main', {title: 'Express', data: store.getState(),  html });
 
   });

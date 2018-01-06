@@ -1,0 +1,18 @@
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  z-index: 3;
+  color: #fff;
+  cursor: default;
+  background-color: #2D9ADD !important;
+  border-color: #2D9ADD !important;
+}
+
+.react-bs-table .react-bs-container-body table tbody tr td {
+  word-break: break-all !important;
+  white-space: normal !important;
+}
+
+.table-hover tbody tr:hover td {
+  color: #2D9ADD !important;
+}
+
+  

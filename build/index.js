@@ -30,7 +30,7 @@ var _reduxThunk = require('redux-thunk');
 
 var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
-var _reducers = require('./components/reducers');
+var _reducers = require('./reducers');
 
 var _reducers2 = _interopRequireDefault(_reducers);
 

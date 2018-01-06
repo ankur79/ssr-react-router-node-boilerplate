@@ -12,7 +12,7 @@ import { Route } from 'react-router'
 import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
 import thunk from 'redux-thunk';
 
-import reducers from './components/reducers' 
+import categories from './reducers' 
 
 import Main from './components/Main';
 
@@ -29,7 +29,7 @@ const middleware = routerMiddleware(history)
 
 
 const store = createStore(
-    reducers, window.__INITIAL_STATE__, applyMiddleware(thunk)
+    categories, window.__INITIAL_STATE__, applyMiddleware(thunk)
   );
 
 render((
