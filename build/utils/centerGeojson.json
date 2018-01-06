@@ -1,0 +1,144 @@
+[{
+	"city": "",
+	"latitude": 37.287687,
+	"longitude": -79.962695,
+	"state": "Roanoke"
+},
+{
+	"city": "",
+	"latitude": 35.502450,
+	"longitude": -97.568507,
+	"state": "Oklahoma City"
+},
+{
+	"city": "",
+	"latitude": 33.7444613,
+	"longitude": -118.3870173,
+	"state": "Palos Verdes"
+}, {
+	"city": "",
+	"latitude": 29.012322,
+	"longitude": -82.083085,
+	"state": "Gulf Coast Florida"
+}, {
+	"city": "",
+	"latitude": 33.573068,
+	"longitude": -112.112738,
+	"state": "Phoenix"
+},
+{
+	"city": "",
+	"latitude": 32.899221,
+	"longitude": -117.148851,
+	"state": "San Diego"
+},
+{
+	"city": "",
+	"latitude": 30.040650,
+	"longitude": -89.947807,
+	"state": "New Orleans"
+}, {
+	"city": "",
+	"latitude": 37.223232,
+	"longitude": -81.449872,
+	"state": "Northern Virginia"
+},
+{
+	"city": "",
+	"latitude": 28.534812,
+	"longitude": -81.352331,
+	"state": "Orange County"
+}, {
+	"city": "",
+	"latitude": 36.217796,
+	"longitude": -115.273922,
+	"state": "Las Vegas"
+},
+{
+	"city": "Gainesville",
+	"latitude": 29.6516344,
+	"longitude": -82.32482619999999,
+	"state": "Central Florida"
+}, {
+	"city": "Central Kansas",
+	"latitude": 37.697948,
+	"longitude": -97.314835,
+	"state": "Kansas-Arkansas"
+}, {
+	"city": "",
+	"latitude": 33.247875,
+	"longitude": -83.441162,
+	"state": "Middle Georgia"
+},
+{
+	"city": "",
+	"latitude": 41.489218,
+	"longitude": -81.665358,
+	"state": "Cleveland"
+},
+{
+	"city": "Ocala",
+	"latitude": 29.1871986,
+	"longitude": -82.14009229999999,
+	"state": "Central Florida"
+}, {
+	"city": "Sun Valley",
+	"latitude": 41.257160,
+	"longitude": -95.995102,
+	"state": "Omaha"
+}, {
+	"city": "",
+	"latitude": 41.684278,
+	"longitude": -72.672530,
+	"state": "Connecticut"
+}, {
+	"city": "Southeast Kansas",
+	"latitude": 39.080924,
+	"longitude": -94.545551,
+	"state": "Kansas-Arkansas"
+}, {
+	"city": "Baton Rouge",
+	"latitude": 30.4416952,
+	"longitude": -91.2515061,
+	"state": "Greater Louisiana"
+}, {
+	"city": "",
+	"latitude": 36.156965,
+	"longitude": -95.915821,
+	"state": "Tulsa"
+}, {
+	"city": "",
+	"latitude": 36.9605021,
+	"longitude": -76.9594186,
+	"state": "Hampton Roads"
+}, {
+	"city": "",
+	"latitude": 34.3987087,
+	"longitude": -119.8198962,
+	"state": "Santa Barbara"
+}, {
+	"city": "Lafayette/Acadiana",
+	"latitude": 30.2121247,
+	"longitude": -92.1086098,
+	"state": "Greater Louisiana"
+}, {
+	"city": "",
+	"latitude": 41.728370,
+	"longitude": -71.555760,
+	"state": "Rhode Island"
+}, {
+	"city": "Omaha",
+	"latitude": 41.2523634,
+	"longitude": -95.997988299997,
+	"state": "Omaha"
+}, {
+	"city": "Northeast Kansas",
+	"latitude": 39.113620,
+	"longitude": -94.539537,
+	"state": "Kansas-Arkansas"
+}, {
+	"city": "Northwest Kansas",
+	"latitude": 39.139834,
+	"longitude": -94.568923,
+	"state": "Kansas-Arkansas"
+}]

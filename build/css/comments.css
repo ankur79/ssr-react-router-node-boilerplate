@@ -1,0 +1,60 @@
+.onfocus{
+    border-radius: 4px !important;
+    margin:10px !important;
+    width:98.7%;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    
+}
+
+.outfocus{
+    border-radius: 4px;
+    margin: 10px;
+    border-color: rgb(8, 190, 8);
+    width: 98.7%;
+    box-shadow: 5px -3px 5px rgba(31, 154, 1, 0.075);
+}
+textarea{
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0px !important;
+    border-left: 1px solid #2d9add !important;
+    font-family: 'Roboto Regular', 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+}
+
+textarea:focus{
+    font-family: 'Roboto Regular', 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    border: 1px solid #2d9add !important;
+}
+
+.display{
+    display:block;
+}
+.hide{
+    display:none;
+}
+
+.Alert-success {
+    float: right !important;
+    background-color: rgba(20, 177, 61, 0.56) !important;
+    position: absolute !important;
+    top: 340px !important;
+    z-index: 5 !important;
+    right: 79px !important; 
+    padding: 0.24em .6em .3em !important;
+    font-size: 88% !important;
+}
+
+.panel-group .panel .panel-heading .panel-title .alert .close >span {
+    position: absolute !important;
+    right: 24px !important;
+    top: 3px !important;
+    color: black !important;
+    font-weight: 900 !important;
+}
+

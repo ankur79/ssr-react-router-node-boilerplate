@@ -1,5 +1,5 @@
 import React from 'react';
-//import '../css/accordion.css';
+//import style from '../css/accordion.css';
 //require('../css/accordion.css')
 //import ReactTableIndex from '../components/reactTableIndex';
 import BcpForm from '../components/bcpForm';

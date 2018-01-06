@@ -16,7 +16,7 @@ var _reactBootstrap = require('react-bootstrap');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//import '../css/accordion.css';
+//import style from '../css/accordion.css';
 //require('../css/accordion.css')
 //import ReactTableIndex from '../components/reactTableIndex';
 var Collapse = function Collapse() {

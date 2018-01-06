@@ -2,7 +2,6 @@ import React from 'react';
 import { Route } from 'react-router'
 
 import Collapse from './Welcome';
-
 export default function Main(props) {
     const { userInfo } = props;
     console.log(userInfo)

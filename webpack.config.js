@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     devtool: 'inline-source-map',
-    entry: ['./app/index.js'],
+    entry: ['./app/index.js', './app/css/main.css'],
     output: {
         path: path.join(__dirname, 'build'),
         filename: 'bundle.js'
@@ -20,11 +20,7 @@ module.exports = {
                     presets: ['es2015', 'stage-2', 'react']
                 }
             },
-            {
-                test: /\.css$/,
-                exclude: /node_modules/,
-                loaders: ['style-loader', 'css-loader'],
-               }
+            {test: /\.css$/,loader: "style-loader!css-loader"}
         ]
     }
 };

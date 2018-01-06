@@ -1,0 +1,43 @@
+[{
+	"name": "Omaha",
+	"cordinates": {
+		"lat": -36.330162,
+		"long": 174.774811
+	}
+}, {
+	"name": "Rhode Island",
+	"cordinates": {
+		"lat": 41.5800945,
+		"long": -71.4774291
+	}
+}, {
+	"name": "Central Florida",
+	"cordinates": {
+		"lat":29.651634,
+		"long":-82.324829
+	}
+}, {
+	"name": "Greater Louisiana",
+	"cordinates": {
+		"lat": 29.9634131,
+		"long": -90.13699400000002
+	}
+}, {
+	"name": "Northern Virginia",
+	"cordinates": {
+		"lat": 37.2232316,
+		"long": -81.44987170000002
+	}
+}, {
+	"name": "Orange County",
+	"cordinates": {
+		"lat": 33.7174708,
+		"long": -117.83114280000001
+	}
+}, {
+	"name": "Kansas-Arkansas",
+	"cordinates": {
+		"lat": 33.8581591,
+		"long": -92.98822330000002
+	}
+}]

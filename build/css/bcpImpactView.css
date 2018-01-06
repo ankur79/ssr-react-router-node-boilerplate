@@ -1,0 +1,23 @@
+.table > thead > tr > th  {
+    text-align: center !important;
+    font-family: 'Roboto Bold', 'Roboto';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 13px;
+}
+
+.table > tbody > tr > th  {
+    text-align: center !important;
+    font-family: 'Roboto Bold', 'Roboto';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 13px;    
+}
+
+.table > tbody > tr > td {
+    text-align: center ;
+    font-family: 'Roboto Regular', 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;    
+}

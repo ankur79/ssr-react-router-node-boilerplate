@@ -1,0 +1,67 @@
+[{
+  "headendname": "Gainesville",
+  "node": "240A",
+  "accountnumber": "AC085",
+  "customertype": "BUS",
+  "macaddress": "34:bd:fa:55:169",
+  "service": "voiceindicator",
+  "videoindicator": 0,
+  "voiceindicator": 1,
+  "dataindicator": 0
+},
+{
+  "headendname": "Gainesville",
+  "node": "240A",
+  "accountnumber": "AC051",
+  "customertype": "BUS",
+  "macaddress": "34:bd:fa:55:106",
+  "service": "dataindicator",
+  "videoindicator": 0,
+  "voiceindicator": 0,
+  "dataindicator": 1
+},
+{
+  "headendname": "Gainesville",
+  "node": "240A",
+  "accountnumber": "AC085",
+  "customertype": "BUS",
+  "macaddress": "34:bd:fa:55:168",
+  "service": "videoindicator",
+  "videoindicator": 1,
+  "voiceindicator": 0,
+  "dataindicator": 0
+},
+{
+  "headendname": "Ville",
+  "node": "240A",
+  "accountnumber": "AC085",
+  "customertype": "BUS",
+  "macaddress": "34:bd:fa:55:170",
+  "service": "dataindicator",
+  "videoindicator": 0,
+  "voiceindicator": 0,
+  "dataindicator": 1
+},
+{
+  "headendname": "Ville",
+  "node": "215A",
+  "accountnumber": "AC067",
+  "customertype": "RES",
+  "macaddress": "34:bd:fa:55:138",
+  "service": "dataindicator",
+  "videoindicator": 0,
+  "voiceindicator": 0,
+  "dataindicator": 1
+},
+{
+  "headendname": "Ville",
+  "node": "234A",
+  "accountnumber": "AC05",
+  "customertype": "BUS",
+  "macaddress": "34:bd:fa:55:15",
+  "service": "voiceindicator",
+  "videoindicator": 0,
+  "voiceindicator": 1,
+  "dataindicator": 0
+}
+]
