@@ -4,7 +4,7 @@ import { matchPath, StaticRouter } from 'react-router-dom';
 
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
-
+import thunk from 'redux-thunk';
 import createHistory from 'history/createMemoryHistory'
 import { Route } from 'react-router'
 
@@ -18,7 +18,7 @@ import Main from '../../components/Main';
 
 import reducers from '../../components/reducers' // Or wherever you keep your reducers
 
-
+const store = createStore(reducers, applyMiddleware(thunk));
 
 module.exports = function (app, config, passport) {
   
@@ -83,29 +83,19 @@ module.exports = function (app, config, passport) {
   });
 
   app.get('/u/*', function (req, res) {
-        // Create a history of your choosing (we're using a browser history in this case)
-        const history = createHistory()
 
-        // Build the middleware for intercepting and dispatching navigation actions
-        const middleware = routerMiddleware(history)
 
         const match = routelist.reduce((acc, route) => matchPath(req.url, { path: route, exact: true }) || acc, null);
 
         // Add the reducer to your store on the `router` key
         // Also apply our middleware for navigating
-        const store = createStore(
-            combineReducers({
-            reducers,
-            router: routerReducer
-            }),
-            applyMiddleware(middleware)
-        )
+
 
         if (!match) {
             res.status(404).send('page not found');
             return;
         }
-    let userInfo = null;
+    let userInfo = "userLost";
     if (req.isAuthenticated()) {
       userInfo = req.user;
     } else {
@@ -117,7 +107,6 @@ module.exports = function (app, config, passport) {
             
     const html = renderToString(
         <Provider store={store}>
-            { /* ConnectedRouter will use the store from Provider automatically */ }
             <StaticRouter  location={req.url} context={context}>
                 <Main userInfo={userInfo}/>
             </StaticRouter>
@@ -126,7 +115,7 @@ module.exports = function (app, config, passport) {
     )
 
     //res.status(200).send(renderFullPage(html));
-    res.render('main', {title: 'Express', data: [],  html });
+    res.render('main', {title: 'Express', data: store.getState(),  html });
 
   });
 

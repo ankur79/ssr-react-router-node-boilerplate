@@ -10,6 +10,8 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRedux = require('react-redux');
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30,11 +32,13 @@ var Welcome = function (_React$Component) {
   _createClass(Welcome, [{
     key: 'render',
     value: function render() {
-      console.log(this.props);
+      var isAuthenticated = this.props.isAuthenticated;
+
+      console.log(isAuthenticated);
       return _react2.default.createElement(
         'div',
         null,
-        ' WElcome to my App '
+        ' Welcome to my App '
       );
     }
   }]);
@@ -42,4 +46,10 @@ var Welcome = function (_React$Component) {
   return Welcome;
 }(_react2.default.Component);
 
-exports.default = Welcome;
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {
+    isAuthenticated: state.isAuthenticated
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(Welcome);

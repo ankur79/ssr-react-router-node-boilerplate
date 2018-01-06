@@ -1,12 +1,16 @@
 import React from 'react';
-
+import { connect } from 'react-redux'
 class Welcome extends React.Component {
-  
-
     render() {
-      console.log(this.props)
-      return <div> WElcome to my App </div>;
+      const { isAuthenticated } = this.props;
+      console.log(isAuthenticated);
+      return <div> Welcome to my App </div>;
     }
+}
+const mapStateToProps = (state, ownProps) => {
+  return {
+    isAuthenticated: state.isAuthenticated
   }
+}
 
-  export default Welcome;
+  export default connect(mapStateToProps)(Welcome);

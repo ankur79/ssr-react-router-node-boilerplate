@@ -10,7 +10,7 @@ import createHistory from 'history/createMemoryHistory'
 import { Route } from 'react-router'
 
 import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
-
+import thunk from 'redux-thunk';
 
 import reducers from './components/reducers' 
 
@@ -26,18 +26,16 @@ const middleware = routerMiddleware(history)
 
 // Add the reducer to your store on the `router` key
 // Also apply our middleware for navigating
+
+
 const store = createStore(
-    combineReducers({
-    reducers,
-    router: routerReducer
-    }),
-    applyMiddleware(middleware)
-)
+    reducers, window.__INITIAL_STATE__, applyMiddleware(thunk)
+  );
 
 render((
     <Provider store={store}>
      <BrowserRouter>
-        <Main pokemon={window.__PRELOADED_STATE__}/>
+        <Main/>
         </BrowserRouter>
     </Provider>), 
     document.getElementById('root')

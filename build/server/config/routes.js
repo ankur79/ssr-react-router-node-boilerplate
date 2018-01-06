@@ -12,6 +12,10 @@ var _redux = require('redux');
 
 var _reactRedux = require('react-redux');
 
+var _reduxThunk = require('redux-thunk');
+
+var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
+
 var _createMemoryHistory = require('history/createMemoryHistory');
 
 var _createMemoryHistory2 = _interopRequireDefault(_createMemoryHistory);
@@ -44,6 +48,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // Or wherever you keep your reducers
 
+var store = (0, _redux.createStore)(_reducers2.default, (0, _redux.applyMiddleware)(_reduxThunk2.default));
 
 module.exports = function (app, config, passport) {
 
@@ -102,11 +107,6 @@ module.exports = function (app, config, passport) {
   });
 
   app.get('/u/*', function (req, res) {
-    // Create a history of your choosing (we're using a browser history in this case)
-    var history = (0, _createMemoryHistory2.default)();
-
-    // Build the middleware for intercepting and dispatching navigation actions
-    var middleware = (0, _reactRouterRedux.routerMiddleware)(history);
 
     var match = _routes2.default.reduce(function (acc, route) {
       return (0, _reactRouterDom.matchPath)(req.url, { path: route, exact: true }) || acc;
@@ -114,16 +114,13 @@ module.exports = function (app, config, passport) {
 
     // Add the reducer to your store on the `router` key
     // Also apply our middleware for navigating
-    var store = (0, _redux.createStore)((0, _redux.combineReducers)({
-      reducers: _reducers2.default,
-      router: _reactRouterRedux.routerReducer
-    }), (0, _redux.applyMiddleware)(middleware));
+
 
     if (!match) {
       res.status(404).send('page not found');
       return;
     }
-    var userInfo = null;
+    var userInfo = "userLost";
     if (req.isAuthenticated()) {
       userInfo = req.user;
     } else {
@@ -144,7 +141,7 @@ module.exports = function (app, config, passport) {
     ));
 
     //res.status(200).send(renderFullPage(html));
-    res.render('main', { title: 'Express', data: [], html: html });
+    res.render('main', { title: 'Express', data: store.getState(), html: html });
   });
 
   app.get('/login', passport.authenticate(config.passport.strategy, {

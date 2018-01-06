@@ -11,10 +11,6 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = require('react-router');
 
-var _List = require('./List');
-
-var _List2 = _interopRequireDefault(_List);
-
 var _Welcome = require('./Welcome');
 
 var _Welcome2 = _interopRequireDefault(_Welcome);
@@ -32,7 +28,6 @@ function Main(props) {
     return _react2.default.createElement(
         'div',
         null,
-        'Your SSR React Router Node App initialised with data!',
         _react2.default.createElement(_reactRouter.Route, { path: '/u/', exact: true, component: _Welcome2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: '/u/list', exact: true, component: _accordionEg2.default })
     );
